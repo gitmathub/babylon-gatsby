@@ -1,0 +1,11 @@
+@import 'src/styles/config';
+
+:global {
+  @import 'src/styles/base';
+}
+
+.layout {
+  display: block;
+
+  min-height: 100vh;
+}
