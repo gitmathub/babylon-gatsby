@@ -2,13 +2,16 @@ import React from 'react'
 
 export default () => (
   <nav>
-    <div className="nav"></div>
+    <div className="nav">
+      <HamburgerMenu />
+      <MenuBar />
+    </div>
   </nav>
 )
 
-const MenuPoints = () => (
-  <div>
-    <span> Kolonialismus</span>
+const MenuBar = () => (
+  <div className="nav__menu-bar">
+    <span>Kolonialismus</span>
     <span>Großstädte</span>
     <span>Kosmopolis</span>
     <span>Dichtung</span>
@@ -16,6 +19,4 @@ const MenuPoints = () => (
   </div>
 )
 
-const HamburgerMenu = () => <span>E</span>
-
-const MenuBar = () => <MenuPoints />
+const HamburgerMenu = () => <button className="nav__hambuger">☰</button>

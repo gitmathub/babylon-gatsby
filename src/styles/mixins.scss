@@ -13,19 +13,19 @@ min-width: 1200px   Laptops (and langer)
 @mixin respond($breakpoint) {
   @if $breakpoint == narrow {
     @media only screen and (max-width: $mobile-width) {
-      background-color: rgb(230, 249, 230);
+      //   background-color: rgb(230, 249, 230);
       @content;
     }
   }
   @if $breakpoint == middle {
     @media only screen and (min-width: $mobile-width) and (max-width: $text-block-width) {
-      background-color: orange;
+      //   background-color: orange;
       @content;
     }
   }
   @if $breakpoint == wide {
     @media only screen and (min-width: $text-block-width) {
-      background-color: rgb(254, 230, 225);
+      //   background-color: rgb(254, 230, 225);
       @content;
     }
   }
