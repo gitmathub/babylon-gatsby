@@ -1,0 +1,79 @@
+// reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines 1rem = 10px; 10px/16px = 62.5%
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Scope One', 'Roboto';
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+}
+
+.header {
+  &__title {
+    @include respond(narrow) {
+      display: inline;
+      font-size: 3.2rem;
+      font-weight: 500;
+      margin: 0.8rem;
+    }
+    @include respond(middle) {
+      display: inline;
+      width: 45rem;
+      font-size: 4.2rem;
+      font-weight: 700;
+      margin: 0.8rem;
+    }
+    @include respond(wide) {
+      display: block;
+      margin: 0 auto;
+      width: 45rem;
+      font-size: 4.8rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  font-family: 'Roboto';
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0 auto;
+  max-width: $text-block-width;
+  @include respond(middle) {
+    visibility: hidden;
+  }
+  span {
+    padding: 0.8rem;
+  }
+}
+.page-wrap {
+  //   width: 80rem;
+  //   margin: 0 auto;
+}
+
+// reading area: 680
+// text size small: 18px, big: 21px
+// line hight 1.6
+.content-wrap {
+  font-size: 1.8rem;
+  max-width: $text-block-width;
+  margin: 0 auto;
+  padding: 0.8rem;
+  @include respond(wide) {
+    font-size: 2.1rem;
+  }
+}
