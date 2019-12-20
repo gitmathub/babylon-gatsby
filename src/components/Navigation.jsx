@@ -2,7 +2,7 @@ import React from 'react'
 
 export default () => (
   <nav>
-    <div className="nav_switcher">
+    <div className="navigation">
       <HamburgerMenu />
       <MenuBar />
     </div>
