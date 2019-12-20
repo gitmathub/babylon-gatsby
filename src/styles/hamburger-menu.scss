@@ -1,4 +1,13 @@
 .navigation {
+  display: none;
+  @include respond(small-to-middle) {
+    color: blue;
+    display: block;
+  }
+  @include respond(wide) {
+    color: green;
+  }
+
   &__checkbox {
     display: none;
   }
