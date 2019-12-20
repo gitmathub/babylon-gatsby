@@ -53,7 +53,7 @@ const HamburgerMenu = () => (
 )
 
 const MenuBar = () => (
-  <div className="nav__menu-bar">
+  <div className="menu-bar">
     <span>Kolonialismus</span>
     <span>Großstädte</span>
     <span>Kosmopolis</span>

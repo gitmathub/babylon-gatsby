@@ -1,11 +1,24 @@
+.menu-bar {
+  display: none;
+  @include respond(wide) {
+    display: flex;
+  }
+  justify-content: space-between;
+  font-size: 1.8rem;
+  font-family: 'Roboto';
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0 auto;
+  max-width: $text-block-width;
+  span {
+    padding: 0.8rem;
+  }
+}
+
 .hamburger-menu {
   display: none;
   @include respond(small-to-middle) {
-    color: blue;
     display: block;
-  }
-  @include respond(wide) {
-    color: green;
   }
 
   &__checkbox {
