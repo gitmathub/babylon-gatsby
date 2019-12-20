@@ -1,16 +1,15 @@
 import React from 'react'
 
-// export default () => (
-//   <nav>
-//     <div className="nav_switcher">
-//       <HamburgerMenu />
-//       <MenuBar />
-//     </div>
-//   </nav>
-// )
-
-// export default () => <div className="hamburger-menu">HALLO</div>
 export default () => (
+  <nav>
+    <div className="nav_switcher">
+      <HamburgerMenu />
+      <MenuBar />
+    </div>
+  </nav>
+)
+
+const HamburgerMenu = () => (
   <nav className="hamburger-menu">
     <input
       type="checkbox"
