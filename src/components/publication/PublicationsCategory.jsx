@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Publication from 'src/components/publication/Publication'
-// import s from './publication.scss'
 
 export default ({ publications }) => (
   <main>

@@ -49,7 +49,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Create pages for each category
-  const template = path.resolve(`src/templates/category-item-list.js`)
+  const template = path.resolve(`src/templates/PublicationsCategory.jsx`)
 
   categories.data.allStrapiCategories.edges.forEach(({ node }) => {
     console.log('node', node)
