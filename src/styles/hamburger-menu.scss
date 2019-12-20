@@ -1,0 +1,85 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: $color-white;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    z-index: 2000;
+  }
+
+  &__icon {
+    font-size: 3rem;
+    position: relative;
+    top: 0.5rem;
+    left: 1.2rem;
+  }
+
+  &__background {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.8rem;
+    right: 1.3rem;
+    background-color: $color-grey-light-2;
+    transition: transform 0.8s;
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+
+    opacity: 0;
+    width: 0;
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 2rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-family: $font-non-serif;
+      font-size: $font-size-wide;
+      padding: 0.5rem 2rem;
+      color: $color-black;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    &:hover,
+    &:active {
+      background-color: $color-white;
+    }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+  &__checkbox:checked ~ &__nav {
+    // display: inline-block;
+    transition: opacity 0.8s;
+    width: 100%;
+    opacity: 1;
+  }
+}

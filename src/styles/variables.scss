@@ -19,8 +19,24 @@ $color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
-// FONT
-$default-font-size: 1.6rem;
+// Text
+$font-serif: 'Scope One';
+$font-non-serif: 'Roboto';
 
+$font-size-middle: 1.8rem;
+$line-height-middle: 1.6;
+
+$font-size-wide: 2.1rem;
+
+$font-size-title-small: 3.2rem;
+$font-weight-title-small: 600;
+
+$font-size-title-middle: 4.2rem;
+$font-weight-title-middle: 700;
+
+$font-size-title-wide: 4.8rem;
+$font-weight-title-wide: 700;
+
+//
 $text-block-width: 680px;
 $mobile-width: 480px;
