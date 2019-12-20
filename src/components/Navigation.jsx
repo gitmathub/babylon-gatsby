@@ -23,27 +23,27 @@ const HamburgerMenu = () => (
     <div className="hamburger-menu__nav">
       <ul className="hamburger-menu__list">
         <li className="hamburger-menu__item">
-          <a href="#" className="hamburger-menu__link">
+          <a href="/#" className="hamburger-menu__link">
             Kolonialismus
           </a>
         </li>
         <li className="hamburger-menu__item">
-          <a href="#" className="hamburger-menu__link">
+          <a href="/#" className="hamburger-menu__link">
             Großstädte
           </a>
         </li>
         <li className="hamburger-menu__item">
-          <a href="#" className="hamburger-menu__link">
+          <a href="/#" className="hamburger-menu__link">
             Kosmopolis
           </a>
         </li>
         <li className="hamburger-menu__item">
-          <a href="#" className="hamburger-menu__link">
+          <a href="/#" className="hamburger-menu__link">
             Dichtung
           </a>
         </li>
         <li className="hamburger-menu__item">
-          <a href="#" className="hamburger-menu__link">
+          <a href="/#" className="hamburger-menu__link">
             Blog
           </a>
         </li>
