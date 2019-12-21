@@ -18,6 +18,23 @@ body {
   color: $color-grey-dark-3;
 }
 
+a {
+  &:link,
+  &:visited {
+    display: inline-block;
+    color: $color-grey-dark-3;
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: $color-grey-light-2;
+  }
+}
+
+a.active {
+  // doesn't work above with &:active
+  background-color: $color-grey-light-2;
+}
+
 .header {
   display: flex;
   justify-content: space-between;

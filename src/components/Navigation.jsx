@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 export default () => (
   <nav>
@@ -23,24 +24,49 @@ const HamburgerMenu = () => (
     <div className="hamburger-menu__nav">
       <ul className="hamburger-menu__list">
         <li className="hamburger-menu__item">
-          <a href="/kolonialismus" className="hamburger-menu__link">
+          <Link
+            to="/"
+            className="hamburger-menu__link"
+            activeClassName="active"
+          >
+            Home
+          </Link>
+        </li>
+        <li className="hamburger-menu__item">
+          <Link
+            to="/kolonialismus"
+            className="hamburger-menu__link"
+            activeClassName="active"
+          >
             Kolonialismus
-          </a>
+          </Link>
         </li>
         <li className="hamburger-menu__item">
-          <a href="/grossstaedte" className="hamburger-menu__link">
+          <Link
+            to="/grossstaedte"
+            className="hamburger-menu__link"
+            activeClassName="active"
+          >
             Großstädte
-          </a>
+          </Link>
         </li>
         <li className="hamburger-menu__item">
-          <a href="/kosmopolis" className="hamburger-menu__link">
+          <Link
+            to="/kosmopolis"
+            className="hamburger-menu__link"
+            activeClassName="active"
+          >
             Kosmopolis
-          </a>
+          </Link>
         </li>
         <li className="hamburger-menu__item">
-          <a href="/dichtung" className="hamburger-menu__link">
+          <Link
+            to="/dichtung"
+            className="hamburger-menu__link"
+            activeClassName="active"
+          >
             Dichtung
-          </a>
+          </Link>
         </li>
         <li className="hamburger-menu__item">
           <a
@@ -57,23 +83,18 @@ const HamburgerMenu = () => (
 
 const MenuBar = () => (
   <div className="menu-bar">
-    <a href="/kolonialismus" className="menu-bar__link">
+    <Link to="/kolonialismus" activeClassName="active">
       Kolonialismus
-    </a>
-    <a href="/grossstaedte" className="menu-bar__link">
+    </Link>
+    <Link to="/grossstaedte" activeClassName="active">
       Großstädte
-    </a>
-    <a href="/kosmopolis" className="menu-bar__link">
+    </Link>
+    <Link to="/kosmopolis" activeClassName="active">
       Kosmopolis
-    </a>
-    <a href="/dichtung" className="menu-bar__link">
+    </Link>
+    <Link to="/dichtung" activeClassName="active">
       Dichtung
-    </a>
-    <a
-      href="https://babylonmetropolis.wordpress.com"
-      className="menu-bar__link"
-    >
-      Blog
-    </a>
+    </Link>
+    <a href="https://babylonmetropolis.wordpress.com">Blog</a>
   </div>
 )

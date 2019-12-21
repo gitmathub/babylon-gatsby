@@ -10,22 +10,6 @@
   text-transform: uppercase;
   margin: 0 auto;
   max-width: $text-block-width;
-
-  &__link {
-    &:link,
-    &:visited {
-      display: inline-block;
-      font-family: $font-non-serif;
-      font-size: $font-size-middle;
-      color: $color-grey-dark-3;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    &:hover,
-    &:active {
-      background-color: $color-grey-light-2;
-    }
-  }
 }
 
 .hamburger-menu {
@@ -91,19 +75,21 @@
     margin: 2rem;
   }
 
+  a.active {
+    background-color: $color-white;
+  }
+
   &__link {
     &:link,
     &:visited {
       display: inline-block;
       font-family: $font-non-serif;
-      font-size: $font-size-wide;
+      font-size: $font-size-middle;
       padding: 0.5rem 2rem;
       color: $color-black;
-      text-decoration: none;
       text-transform: uppercase;
     }
-    &:hover,
-    &:active {
+    &:hover {
       background-color: $color-white;
     }
   }
@@ -112,7 +98,6 @@
     transform: scale(80);
   }
   &__checkbox:checked ~ &__nav {
-    // display: inline-block;
     transition: opacity 0.8s;
     width: 100%;
     opacity: 1;
