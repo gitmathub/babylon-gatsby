@@ -10,8 +10,21 @@
   text-transform: uppercase;
   margin: 0 auto;
   max-width: $text-block-width;
-  span {
-    padding: 0.8rem;
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-family: $font-non-serif;
+      font-size: $font-size-middle;
+      color: $color-grey-dark-3;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    &:hover,
+    &:active {
+      background-color: $color-grey-light-2;
+    }
   }
 }
 

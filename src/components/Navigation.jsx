@@ -23,27 +23,30 @@ const HamburgerMenu = () => (
     <div className="hamburger-menu__nav">
       <ul className="hamburger-menu__list">
         <li className="hamburger-menu__item">
-          <a href="/#" className="hamburger-menu__link">
+          <a href="/kolonialismus" className="hamburger-menu__link">
             Kolonialismus
           </a>
         </li>
         <li className="hamburger-menu__item">
-          <a href="/#" className="hamburger-menu__link">
+          <a href="/grossstaedte" className="hamburger-menu__link">
             Großstädte
           </a>
         </li>
         <li className="hamburger-menu__item">
-          <a href="/#" className="hamburger-menu__link">
+          <a href="/kosmopolis" className="hamburger-menu__link">
             Kosmopolis
           </a>
         </li>
         <li className="hamburger-menu__item">
-          <a href="/#" className="hamburger-menu__link">
+          <a href="/dichtung" className="hamburger-menu__link">
             Dichtung
           </a>
         </li>
         <li className="hamburger-menu__item">
-          <a href="/#" className="hamburger-menu__link">
+          <a
+            href="https://babylonmetropolis.wordpress.com"
+            className="hamburger-menu__link"
+          >
             Blog
           </a>
         </li>
@@ -54,10 +57,23 @@ const HamburgerMenu = () => (
 
 const MenuBar = () => (
   <div className="menu-bar">
-    <span>Kolonialismus</span>
-    <span>Großstädte</span>
-    <span>Kosmopolis</span>
-    <span>Dichtung</span>
-    <span>Blog</span>
+    <a href="/kolonialismus" className="menu-bar__link">
+      Kolonialismus
+    </a>
+    <a href="/grossstaedte" className="menu-bar__link">
+      Großstädte
+    </a>
+    <a href="/kosmopolis" className="menu-bar__link">
+      Kosmopolis
+    </a>
+    <a href="/dichtung" className="menu-bar__link">
+      Dichtung
+    </a>
+    <a
+      href="https://babylonmetropolis.wordpress.com"
+      className="menu-bar__link"
+    >
+      Blog
+    </a>
   </div>
 )

@@ -1,3 +1,6 @@
 import * as React from 'react'
 
-export default () => <footer>(c) Babylon Metropolis Verlag</footer>
+const thisYear = new Date().getFullYear()
+export default () => (
+  <footer>(c) 1997 - {thisYear} &nbsp; Babylon Metropolis Verlag</footer>
+)

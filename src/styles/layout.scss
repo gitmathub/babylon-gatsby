@@ -59,3 +59,10 @@ body {
     font-size: $font-size-wide;
   }
 }
+
+footer {
+  display: block;
+  font-size: $font-size-middle;
+  text-align: center;
+  margin: 5rem;
+}

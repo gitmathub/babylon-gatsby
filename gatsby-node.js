@@ -1,4 +1,6 @@
 const path = require('path')
+
+// FIXME: clean up
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
@@ -24,7 +26,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   let itemList = {}
   const edges = categories.data.allStrapiCategories.edges
   for (const index in edges) {
-    console.log('z', index, edges[index].node.id)
     const id = edges[index].node.strapiId
     const result = await graphql(`
       {
@@ -43,8 +44,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
     `)
-    console.log('result', result)
-    console.log('itemList', result.data.allStrapiPublications.edges)
     itemList[id] = result.data.allStrapiPublications.edges
   }
 
@@ -52,11 +51,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const template = path.resolve(`src/templates/PublicationsCategory.jsx`)
 
   categories.data.allStrapiCategories.edges.forEach(({ node }) => {
-    console.log('node', node)
     const path = node.slug
     const id = node.strapiId
     const contents = itemList[id]
-    console.log('contents', contents)
     createPage({
       path,
       component: template,
