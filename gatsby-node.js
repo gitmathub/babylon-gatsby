@@ -38,6 +38,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               authors {
                   firstname
                   lastname
+                  titles
               }
               abstract
               description

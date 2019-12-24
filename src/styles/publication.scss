@@ -1,3 +1,21 @@
-.publication-list-item {
-  margin: 2rem 0rem;
+.pub-list-item {
+  margin: 5.2rem 0rem;
+
+  &__subtitle {
+    margin-bottom: 0.8rem;
+  }
+  &__author-list {
+    display: inline;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: smaller;
+  }
+  &__author {
+    text-transform: uppercase;
+    margin-right: 1.2rem;
+  }
+
+  &__abstract {
+    margin: 2rem 0rem;
+  }
 }
