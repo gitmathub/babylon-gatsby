@@ -18,6 +18,7 @@ export const query = graphql`
         node {
           id
           title
+          abstract
           description
         }
       }

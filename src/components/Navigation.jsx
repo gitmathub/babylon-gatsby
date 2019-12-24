@@ -17,7 +17,7 @@ const HamburgerMenu = () => (
       className="hamburger-menu__checkbox"
       id="navi-toggle"
     />
-    <label for="navi-toggle" className="hamburger-menu__button">
+    <label htmlFor="navi-toggle" className="hamburger-menu__button">
       <span className="hamburger-menu__icon">☰</span>
     </label>
     <div className="hamburger-menu__background">&nbsp;</div>

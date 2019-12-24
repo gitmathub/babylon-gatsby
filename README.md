@@ -11,3 +11,7 @@ This site is under construction. Currently we have a staffholding with strapi ho
 http://localhost:8000
 
 http://localhost:8000/___graphql
+
+### Todos
+
+- checkout https://github.com/staylor/react-helmet-async for resolving the warning about the _SideEffect(NullComponent)_: https://github.com/gatsbyjs/gatsby/issues/17865

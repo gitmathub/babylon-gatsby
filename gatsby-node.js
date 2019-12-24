@@ -34,6 +34,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               id
               title
+              subtitle
+              authors {
+                  firstname
+                  lastname
+              }
+              abstract
               description
               category {
                 name
@@ -48,16 +54,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Create pages for each category
-  const template = path.resolve(`src/templates/PublicationsCategory.jsx`)
+  const template = path.resolve(
+    `src/templates/PublicationsCategoryTemplate.jsx`
+  )
 
   categories.data.allStrapiCategories.edges.forEach(({ node }) => {
     const path = node.slug
     const id = node.strapiId
+    const categoryName = node.name
     const contents = itemList[id]
     createPage({
       path,
       component: template,
       context: {
+        categoryName,
         contents,
       },
     })
