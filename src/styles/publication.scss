@@ -1,21 +1,35 @@
-.pub-list-item {
-  margin: 5.2rem 0rem;
+.pub-category {
+  @include respond(wide) {
+    margin-top: 3.2rem;
+  }
+}
+
+.pub {
+  @include respond(wide) {
+    &:first-child {
+      margin: 3.2rem 0rem;
+    }
+    margin: 5.2rem 0rem;
+  }
+
+  &:first-child {
+    margin: 3.2rem 0rem;
+  }
+  margin: 3.6rem 0rem;
 
   &__subtitle {
     margin-bottom: 0.8rem;
   }
   &__author-list {
     display: inline;
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size: smaller;
   }
   &__author {
-    text-transform: uppercase;
     margin-right: 1.2rem;
   }
 
   &__abstract {
     margin: 2rem 0rem;
+    font-family: 'Roboto';
+    font-weight: 300;
   }
 }

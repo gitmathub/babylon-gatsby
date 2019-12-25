@@ -20,6 +20,11 @@ export const query = graphql`
           title
           abstract
           description
+          authors {
+            firstname
+            lastname
+            titles
+          }
         }
       }
     }
