@@ -42,10 +42,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               }
               abstract
               description
-              category {
-                name
-                id
-              }
             }
           }
         }
