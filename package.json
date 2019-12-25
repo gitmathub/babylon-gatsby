@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo 'no tests"
+    "test": "jest src"
   },
   "dependencies": {
     "gatsby": "^2.18.11",
@@ -25,9 +25,12 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "babel-preset-gatsby-package": "^0.2.14",
     "dev-tools": "^0.1.6",
     "gatsby-plugin-root-import": "^2.0.5",
-    "prettier": "^1.19.1"
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "slug": "^2.0.0"
   },
   "repository": {
     "type": "git",
