@@ -30,6 +30,8 @@ function getPublications(graphql) {
           node {
             title
             subtitle
+            abstract
+            description
             strapiId
             size
             release_date
@@ -38,7 +40,6 @@ function getPublications(graphql) {
             issn
             isbn
             is_sold_out
-            description
             authors {
               firstname
               lastname

@@ -11,6 +11,18 @@ export default ({ publication }) => (
         </span>
       ))}
     </div>
-    <div className="pub__abstract">{publication.description}</div>
+
+    <div className="pub__abstract">
+      {getText(publication.description, publication.abstract)}
+    </div>
+    <div>{publication.price}€</div>
+    <div>{publication.isbn}</div>
+    <div>{publication.issn}</div>
+    <div>{publication.size}</div>
+    <div>{publication.is_sold_out}</div>
+    <div>{publication.properties}</div>
   </article>
 )
+
+const getText = (description, abstract) =>
+  description ? description : abstract
