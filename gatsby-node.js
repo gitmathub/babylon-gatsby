@@ -1,72 +1,10 @@
-const path = require('path')
+const publicationsCategory = require('./src/page-creators/publications-category-creator')
 
-// FIXME: clean up
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
-
-  const categories = await graphql(`
-    {
-      allStrapiCategories {
-        edges {
-          node {
-            id
-            name
-            slug
-            strapiId
-          }
-        }
-      }
-    }
-  `)
-  if (categories.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
-  }
-
-  let itemList = {}
-  const edges = categories.data.allStrapiCategories.edges
-  for (const index in edges) {
-    const id = edges[index].node.strapiId
-    const result = await graphql(`
-      {
-        allStrapiPublications(filter: { category: { id: { eq: ${id} } } }) {
-          edges {
-            node {
-              id
-              title
-              subtitle
-              authors {
-                  firstname
-                  lastname
-                  titles
-              }
-              abstract
-              description
-            }
-          }
-        }
-      }
-    `)
-    itemList[id] = result.data.allStrapiPublications.edges
-  }
-
-  // Create pages for each category
-  const template = path.resolve(
-    `src/templates/PublicationsCategoryTemplate.jsx`
-  )
-
-  categories.data.allStrapiCategories.edges.forEach(({ node }) => {
-    const path = node.slug
-    const id = node.strapiId
-    const categoryName = node.name
-    const contents = itemList[id]
-    createPage({
-      path,
-      component: template,
-      context: {
-        categoryName,
-        contents,
-      },
-    })
-  })
+exports.createPages = async ({ graphql, actions }) => {
+  await Promise.all([
+    publicationsCategory.createPageForEachCategory({
+      graphql,
+      actions,
+    }),
+  ])
 }
