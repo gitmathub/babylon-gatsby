@@ -5,7 +5,7 @@ const permalink = require('../utils/permalink')
 exports.createPageForPublication = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const publication = await getPublication(graphql, 1)
+  const publication = await getPublications(graphql)
 
   publication.data.allStrapiPublications.edges.forEach(({ node }) => {
     const publication = node
@@ -22,10 +22,10 @@ exports.createPageForPublication = async ({ graphql, actions }) => {
   })
 }
 
-function getPublication(graphql, strapiId) {
+function getPublications(graphql) {
   return graphql(`
     {
-      allStrapiPublications(filter: { strapiId: { eq: ${strapiId} } }) {
+      allStrapiPublications {
         edges {
           node {
             title
