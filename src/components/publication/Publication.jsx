@@ -1,4 +1,5 @@
 import * as React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 export default ({ publication }) => (
   <article className="pub">
@@ -12,9 +13,9 @@ export default ({ publication }) => (
       ))}
     </div>
 
-    <div className="pub__abstract">
+    <ReactMarkdown escapeHtml={false} className="pub__abstract">
       {getText(publication.description, publication.abstract)}
-    </div>
+    </ReactMarkdown>
     <div>{publication.price}€</div>
     <div>{publication.isbn}</div>
     <div>{publication.issn}</div>

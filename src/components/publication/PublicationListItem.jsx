@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { createPublicationLink } from 'src/utils/permalink'
+import ReactMarkdown from 'react-markdown'
 
 export default ({ publication }) => (
   <article className="pub">
@@ -17,6 +18,8 @@ export default ({ publication }) => (
         </span>
       ))}
     </div>
-    <div className="pub__abstract">{publication.abstract}</div>
+    <ReactMarkdown escapeHtml={false} className="pub__abstract">
+      {publication.abstract}
+    </ReactMarkdown>
   </article>
 )
