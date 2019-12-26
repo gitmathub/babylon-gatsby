@@ -18,7 +18,7 @@ export default ({ publication }) => (
         </span>
       ))}
     </div>
-    <ReactMarkdown escapeHtml={false} className="pub__abstract">
+    <ReactMarkdown escapeHtml={false} className="layout__floating-text">
       {publication.abstract}
     </ReactMarkdown>
   </article>

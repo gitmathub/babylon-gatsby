@@ -1,0 +1,15 @@
+footer {
+  display: block;
+  font-size: $font-size-middle;
+  text-align: center;
+  margin: 5rem;
+}
+
+.footer {
+  &__link {
+    padding-left: 1.6rem;
+  }
+  &__link:first-child {
+    padding-left: 0;
+  }
+}

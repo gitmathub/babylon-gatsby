@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(wide) {
+    display: block;
+  }
+
+  &__title {
+    @include respond(small) {
+      font-size: $font-size-title-small;
+      font-weight: $font-weight-title-small;
+      margin: 0.8rem;
+      margin-right: 5.5rem; // avoid collition with hambuger nav
+    }
+    @include respond(middle) {
+      font-size: $font-size-title-middle;
+      font-weight: 700;
+      margin: 0.8rem;
+    }
+    @include respond(wide) {
+      margin: 0 auto;
+      width: 45rem;
+      font-size: $font-size-title-wide;
+      font-weight: $font-weight-title-wide;
+    }
+  }
+}

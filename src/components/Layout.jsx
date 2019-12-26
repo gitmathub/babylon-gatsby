@@ -12,10 +12,8 @@ export default ({ children }) => (
     <Helmet {...helmet} />
     <div className="page-wrap">
       <Header />
-      <Main content={children} />
+      <main>{children}</main>
       <Footer />
     </div>
   </div>
 )
-
-const Main = ({ content }) => <main className="content-wrap">{content}</main>

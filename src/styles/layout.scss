@@ -35,39 +35,11 @@ a.active {
   background-color: $color-grey-light-2;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-
-  @include respond(wide) {
-    display: block;
-  }
-
-  &__title {
-    @include respond(small) {
-      font-size: $font-size-title-small;
-      font-weight: $font-weight-title-small;
-      margin: 0.8rem;
-      margin-right: 5.5rem; // avoid collition with hambuger nav
-    }
-    @include respond(middle) {
-      font-size: $font-size-title-middle;
-      font-weight: 700;
-      margin: 0.8rem;
-    }
-    @include respond(wide) {
-      margin: 0 auto;
-      width: 45rem;
-      font-size: $font-size-title-wide;
-      font-weight: $font-weight-title-wide;
-    }
-  }
-}
-
 // reading area: 680
-// text size small: 18px, big: 21px
+// text size medium to small: 18px
+// text size wide: 21px
 // line hight 1.6
-.content-wrap {
+main {
   font-size: $font-size-middle;
   max-width: $text-block-width;
   margin: 0 auto;
@@ -77,9 +49,36 @@ a.active {
   }
 }
 
-footer {
-  display: block;
-  font-size: $font-size-middle;
-  text-align: center;
-  margin: 5rem;
+section,
+article {
+  @include respond(wide) {
+    &:first-child {
+      margin: 3.2rem 0rem;
+    }
+    margin: 5.2rem 0rem;
+  }
+
+  &:first-child {
+    margin: 3.2rem 0rem;
+  }
+  margin: 3.6rem 0rem;
+
+  .layout {
+    &__floating-text {
+      margin: 2rem 0rem;
+      font-family: $font-non-serif;
+      font-weight: 300;
+    }
+  }
+
+  p {
+    margin-bottom: 0.8rem;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    margin-left: 2.8rem;
+  }
 }

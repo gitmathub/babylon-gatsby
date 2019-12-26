@@ -15,7 +15,7 @@ export default ({ publication }) => {
           </span>
         ))}
       </div>
-      <ReactMarkdown escapeHtml={false} className="pub__abstract">
+      <ReactMarkdown escapeHtml={false} className="layout__floating-text">
         {getText(description, abstract)}
       </ReactMarkdown>
       <DetailsAndProperties publication={publication} />
@@ -28,14 +28,15 @@ const getText = (description, abstract) =>
 
 const DetailsAndProperties = ({ publication }) => {
   const {
-    release_date,
+    figures,
+    is_sold_out,
     isbn,
     issn,
     pages,
-    size,
     price,
     properties,
-    is_sold_out,
+    release_date,
+    size,
   } = publication
 
   return (
@@ -45,7 +46,8 @@ const DetailsAndProperties = ({ publication }) => {
         <ReleaseDate release_date={release_date} />
         <Detail name="ISBN" data={isbn} />
         <Detail name="ISSN" data={issn} />
-        <Detail name="Seitenanzahl" data={pages} />
+        <Detail name="Seiten" data={pages} />
+        <Detail name="Abbildungen" data={figures} />
         <Detail name="Buchformat" data={size} />
         <Price price={price} />
         <Properties properties={properties} />

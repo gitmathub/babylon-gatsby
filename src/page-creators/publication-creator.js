@@ -35,9 +35,11 @@ function getPublications(graphql) {
               titles
             }
             description
+            figures
             is_sold_out
             isbn
             issn
+            pages
             price
             properties
             release_date
