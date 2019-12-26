@@ -54,7 +54,7 @@ async function getPublicationsInCategory(graphql, categories, reporter) {
     const id = edges[index].node.strapiId
     await graphql(`
       {
-        allStrapiPublications(filter: { category: { id: { eq: ${id} } } }) {
+        allStrapiPublications(filter: { category: { id: { eq: ${id} } } }, sort: { fields: release_date, order: DESC }) {
           edges {
             node {
               id

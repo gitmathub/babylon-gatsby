@@ -28,23 +28,23 @@ function getPublications(graphql) {
       allStrapiPublications {
         edges {
           node {
-            title
-            subtitle
             abstract
-            description
-            strapiId
-            size
-            release_date
-            properties
-            price
-            issn
-            isbn
-            is_sold_out
             authors {
               firstname
               lastname
               titles
             }
+            description
+            is_sold_out
+            isbn
+            issn
+            price
+            properties
+            release_date
+            size
+            strapiId
+            subtitle
+            title
           }
         }
       }

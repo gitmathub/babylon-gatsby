@@ -29,11 +29,33 @@
 
   &__abstract {
     margin: 2rem 0rem;
-    font-family: 'Roboto';
+    font-family: $font-non-serif;
     font-weight: 300;
   }
 
   li {
     margin-left: 2.8rem;
+  }
+
+  p {
+    margin-bottom: 0.8rem;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &__details {
+    margin-top: 4.8rem;
+    font-family: $font-non-serif;
+    font-weight: 300;
+    font-size: smaller;
+  }
+
+  &__details td {
+    padding-right: 1rem;
+  }
+
+  &__sold-out {
+    font-style: italic;
   }
 }
