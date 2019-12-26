@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from 'src/components/Layout'
-import PublicationsCategory from 'src/components/publication/PublicationsCategory'
+import PublicationsListing from 'src/components/publication/PublicationsListing'
 
 export default data => (
   <Layout>
-    <PublicationsCategory
-      categoryName={data.pageContext.categoryName}
+    <PublicationsListing
+      title={data.pageContext.categoryName}
       publications={data.pageContext.publications}
     />
   </Layout>

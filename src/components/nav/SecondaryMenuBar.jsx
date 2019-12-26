@@ -6,7 +6,7 @@ export default ({ prop }) => (
     <Link to="/" className="nav__link" activeClassName="active">
       Home
     </Link>
-    <Link to="/" className="nav__link" activeClassName="active">
+    <Link to="/verlagsprogramm" className="nav__link" activeClassName="active">
       Verlagsprogramm
     </Link>
     <Link to="/" className="nav__link" activeClassName="active">

@@ -7,7 +7,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <PublicationsListing
-        title="Neuerscheinungen"
+        title="Verlagsprogramm"
         publications={data.allStrapiPublications.edges}
       />
     </Layout>
@@ -16,10 +16,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allStrapiPublications(
-      filter: { is_featured: { eq: true } }
-      sort: { fields: release_date, order: DESC }
-    ) {
+    allStrapiPublications(sort: { fields: release_date, order: DESC }) {
       edges {
         node {
           id

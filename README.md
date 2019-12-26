@@ -43,11 +43,21 @@ npm run serve -- --prefix-paths
 
 http://localhost:9000/next
 
+## Maintenaince
+
+### Database dump
+
+```bash
+cd babylon-strapi/data
+sqlite3 sqlite.db .dump > 20191226-02-strapi-babylon-dump.sql
+```
+
 ### Todos
 
 Must have
 
-- [ ] Footer navigation
+- [x] Footer navigation
+- [x] Page with all items (Verlagsprogramm)
 - [ ] Author pages
 - [ ] SSL certificate
 - [ ] CMS installation
