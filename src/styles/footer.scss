@@ -1,15 +1,17 @@
 footer {
-  display: block;
+  // display: block;
   font-size: $font-size-middle;
   text-align: center;
   margin: 5rem;
+  display: flex-wrap;
+  justify-content: space-between;
 }
 
 .footer {
   &__link {
-    padding-left: 1.6rem;
+    margin-left: 1.6rem;
   }
   &__link:first-child {
-    padding-left: 0;
+    margin-left: 0;
   }
 }

@@ -60,7 +60,7 @@ const SoldOut = ({ isSoldOut }) => {
   if (!isSoldOut) return null
   return (
     <tr>
-      <td colspan="2">
+      <td colSpan="2">
         <span className="pub__sold-out">
           Die Ausgabe ist leider vergriffen.
         </span>
@@ -103,17 +103,9 @@ const Properties = ({ properties }) => {
   if (!properties) return null
   return (
     <tr>
-      <td colspan="2">
+      <td colSpan="2">
         <ReactMarkdown escapeHtml={false}>{properties}</ReactMarkdown>
       </td>
     </tr>
   )
 }
-// Datum: 1987 ISBN: 978-3-925529-00-9 Seitenanzahl: 192 Buchformat: 13,9 x 21
-// Preis: Euro 20.00
-// <div>{publication.price}€</div>
-// <div>{publication.isbn}</div>
-// <div>{publication.issn}</div>
-// <div>{publication.size}</div>
-// <div>{publication.is_sold_out}</div>
-// <div>{publication.properties}</div>

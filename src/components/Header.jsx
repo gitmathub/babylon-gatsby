@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import Navigation from 'src/components/Navigation'
+import Navigation from 'src/components/nav/Navigation'
 
 export default () => (
   <header className="header">

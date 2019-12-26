@@ -2,15 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 export default () => (
-  <nav>
-    <div className="navigation">
-      <HamburgerMenu />
-      <MenuBar />
-    </div>
-  </nav>
-)
-
-const HamburgerMenu = () => (
   <nav className="hamburger-menu">
     <input
       type="checkbox"
@@ -79,22 +70,4 @@ const HamburgerMenu = () => (
       </ul>
     </div>
   </nav>
-)
-
-const MenuBar = () => (
-  <div className="menu-bar">
-    <Link to="/kolonialismus" activeClassName="active">
-      Kolonialismus
-    </Link>
-    <Link to="/grossstaedte" activeClassName="active">
-      Großstädte
-    </Link>
-    <Link to="/kosmopolis" activeClassName="active">
-      Kosmopolis
-    </Link>
-    <Link to="/dichtung" activeClassName="active">
-      Dichtung
-    </Link>
-    <a href="https://babylonmetropolis.wordpress.com">Blog</a>
-  </div>
 )

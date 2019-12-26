@@ -1,15 +1,31 @@
-.menu-bar {
-  display: none;
-  @include respond(wide) {
-    display: flex;
+.nav {
+  &__top {
+    display: none;
+    @include respond(wide) {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: $text-block-width;
+    }
   }
-  justify-content: space-between;
-  font-size: $font-size-middle;
-  font-family: $font-sans-serif;
-  font-weight: $font-weight-light;
-  text-transform: uppercase;
-  margin: 0 auto;
-  max-width: $text-block-width;
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: smaller;
+  }
+
+  &__menu-bar {
+    font-size: $font-size-middle;
+    font-family: $font-sans-serif;
+    font-weight: $font-weight-light;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    padding: 0 1rem;
+  }
 }
 
 .hamburger-menu {

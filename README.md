@@ -60,4 +60,9 @@ Good to have
 - [ ] Author images
 - [ ] Meta tags
 
+Goodies
+
+- [ ] Hamburger menu: collapse when click outside
+- [ ] Margin on windows internet explorer
+
 - checkout https://github.com/staylor/react-helmet-async for resolving the warning about the _SideEffect(NullComponent)_: https://github.com/gatsbyjs/gatsby/issues/17865

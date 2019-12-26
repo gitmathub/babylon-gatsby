@@ -6,5 +6,6 @@ exports.createPublicationLink = ({ publicationTitle }) => {
       `Filename creation failed. Missing publication title: ${publicationTitle}`
     )
   }
-  return createValidName(publicationTitle.toLowerCase())
+  const path = '/'
+  return path + createValidName(publicationTitle.toLowerCase())
 }
