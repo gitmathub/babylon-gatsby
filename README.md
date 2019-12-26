@@ -45,8 +45,19 @@ http://localhost:9000/next
 
 ### Todos
 
+Must have
+
+- [ ] Footer navigation
+- [ ] Author pages
+- [ ] SSL certificate
+- [ ] CMS installation
+- [ ] Deployment automation
+
+Good to have
+
+- [ ] Coloring
+- [ ] Publication images
+- [ ] Author images
+- [ ] Meta tags
+
 - checkout https://github.com/staylor/react-helmet-async for resolving the warning about the _SideEffect(NullComponent)_: https://github.com/gatsbyjs/gatsby/issues/17865
-
-```
-
-```

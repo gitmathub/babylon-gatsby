@@ -4,8 +4,8 @@
     display: flex;
   }
   justify-content: space-between;
-  font-size: 1.8rem;
-  font-family: 'Roboto';
+  font-size: $font-size-middle;
+  font-family: $font-sans-serif;
   font-weight: $font-weight-light;
   text-transform: uppercase;
   margin: 0 auto;
@@ -83,7 +83,7 @@
     &:link,
     &:visited {
       display: inline-block;
-      font-family: $font-non-serif;
+      font-family: $font-sans-serif;
       font-size: $font-size-middle;
       padding: 0.5rem 2rem;
       color: $color-black;
