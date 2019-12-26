@@ -10,7 +10,7 @@ export default ({ publication }) => (
         {publication.title}
       </Link>
     </h2>
-    <h3 className="pub__subtitle">{publication.subtitle}</h3>
+    <h3>{publication.subtitle}</h3>
     <div className="pub__author-list">
       {publication.authors.map(({ titles, firstname, lastname }, index) => (
         <span className="pub__author" key={index}>

@@ -5,9 +5,9 @@ export default ({ publication }) => {
   const { abstract, description, authors, subtitle, title } = publication
 
   return (
-    <article className="pub">
+    <article>
       <h1>{title}</h1>
-      <h3 className="pub__subtitle">{subtitle}</h3>
+      <h3>{subtitle}</h3>
       <div className="pub__author-list">
         {authors.map(({ titles, firstname, lastname }, index) => (
           <span className="pub__author" key={index}>

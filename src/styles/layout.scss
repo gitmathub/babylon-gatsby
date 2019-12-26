@@ -72,6 +72,13 @@ article {
     }
   }
 
+  h3 {
+    margin-bottom: 0.8rem;
+  }
+  h4 {
+    margin: 1.6rem 0 0.8rem 0;
+  }
+
   p {
     margin-bottom: 0.8rem;
   }
@@ -91,8 +98,6 @@ article {
     content: '-';
     width: 1.6rem;
     margin-left: -1.6rem;
-  }
-  h4 {
-    margin: 1.6rem 0 0.8rem 0;
+    vertical-align: top;
   }
 }

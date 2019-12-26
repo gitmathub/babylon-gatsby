@@ -58,7 +58,8 @@ Must have
 
 - [x] Footer navigation
 - [x] Page with all items (Verlagsprogramm)
-- [ ] Author pages
+- [ ] Authors page
+- [ ] Listing of all authors
 - [ ] SSL certificate
 - [ ] CMS installation
 - [ ] Deployment automation
@@ -66,9 +67,11 @@ Must have
 Good to have
 
 - [ ] Coloring
+- [ ] Meta tags
+- [ ] Favicon
 - [ ] Publication images
 - [ ] Author images
-- [ ] Meta tags
+- [ ] Adjust link on Wikipedia
 
 Goodies
 
