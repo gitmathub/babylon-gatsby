@@ -67,7 +67,7 @@ article {
     &__floating-text {
       margin: 2rem 0rem;
       font-family: $font-non-serif;
-      font-weight: 300;
+      font-weight: $font-weight-middle;
     }
   }
 
@@ -78,7 +78,20 @@ article {
     margin-bottom: 0;
   }
 
-  li {
+  ul,
+  ol {
     margin-left: 2.8rem;
+  }
+  ul > li {
+    list-style: none;
+  }
+  ul > li:before {
+    display: inline-block;
+    content: '-';
+    width: 1.6rem;
+    margin-left: -1.6rem;
+  }
+  h4 {
+    margin: 1.6rem 0 0.8rem 0;
   }
 }

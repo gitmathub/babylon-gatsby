@@ -15,12 +15,12 @@
     }
     @include respond(middle) {
       font-size: $font-size-title-middle;
-      font-weight: 700;
+      font-weight: $font-weight-title-middle;
       margin: 0.8rem;
     }
     @include respond(wide) {
-      margin: 0 auto;
-      width: 45rem;
+      display: block;
+      text-align: center;
       font-size: $font-size-title-wide;
       font-weight: $font-weight-title-wide;
     }

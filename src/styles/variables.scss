@@ -20,14 +20,17 @@ $color-white: #fff;
 $color-black: #000;
 
 // Text
-$font-serif: 'Scope One';
-$font-non-serif: 'Roboto';
+$font-serif: 'Scope One'; //400, 600, 700
+$font-non-serif: 'Roboto'; //100, 300, 400
 
-$font-size-middle: 1.8rem;
 $line-height-middle: 1.6;
 
+$font-size-middle: 1.8rem;
 $font-size-wide: 2.1rem;
+$font-weight-middle: 300;
+$font-weight-light: 100;
 
+// title
 $font-size-title-small: 3.2rem;
 $font-weight-title-small: 600;
 

@@ -5,6 +5,7 @@
 const path = require('path')
 
 module.exports = {
+  pathPrefix: `/next`,
   plugins: [
     `gatsby-plugin-sass`,
     'gatsby-plugin-root-import',
