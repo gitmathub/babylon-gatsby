@@ -1,5 +1,6 @@
 import * as React from 'react'
 import ReactMarkdown from 'react-markdown'
+import AuthorsSection from 'src/components/author/AuthorsSection'
 
 export default ({ publication }) => {
   const { abstract, description, authors, subtitle, title } = publication
@@ -8,23 +9,22 @@ export default ({ publication }) => {
     <article>
       <h1>{title}</h1>
       <h3>{subtitle}</h3>
-      <div className="pub__author-list">
-        {authors.map(({ titles, firstname, lastname }, index) => (
-          <span className="pub__author" key={index}>
-            {titles} {firstname} {lastname}
-          </span>
-        ))}
-      </div>
-      <ReactMarkdown escapeHtml={false} className="layout__floating-text">
-        {getText(description, abstract)}
-      </ReactMarkdown>
+      <AuthorsSection authors={authors} />
+      <Description description={description} abstract={abstract} />
       <DetailsAndProperties publication={publication} />
     </article>
   )
 }
 
-const getText = (description, abstract) =>
-  description ? description : abstract
+const Description = ({ description, abstract }) => {
+  const text = description ? description : abstract
+
+  return (
+    <ReactMarkdown escapeHtml={false} className="layout__floating-text">
+      {text}
+    </ReactMarkdown>
+  )
+}
 
 const DetailsAndProperties = ({ publication }) => {
   const {

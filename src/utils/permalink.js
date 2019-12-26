@@ -1,13 +1,13 @@
 const createValidName = require('slug')
 
-exports.createPublicationLink = ({ publicationTitle }) => {
-  if (!publicationTitle) {
+exports.createPublicationLink = ({ title }) => {
+  if (!title) {
     throw new Error(
-      `Filename creation failed. Missing publication title: ${publicationTitle}`
+      `Filename creation failed. Missing publication title: ${title}`
     )
   }
   const path = '/'
-  return path + createValidName(publicationTitle.toLowerCase())
+  return path + createValidName(title.toLowerCase())
 }
 
 exports.createAuthorPageLink = ({ firstname, lastname }) => {

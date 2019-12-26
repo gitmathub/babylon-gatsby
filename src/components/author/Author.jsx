@@ -1,7 +1,6 @@
 import * as React from 'react'
 import ReactMarkdown from 'react-markdown'
-import { createPublicationLink } from 'src/utils/permalink'
-import { Link } from 'gatsby'
+import PublicationLink from 'src/components/publication/PublicationLink'
 
 export default ({ author }) => {
   const { firstname, lastname, titles, publications, info } = author
@@ -35,15 +34,12 @@ const PublicationLinks = ({ publications }) => {
   return (
     <section className="layout__floating-text">
       <ul>
-        {publications.map(publication => (
-          <li>
-            <Link
-              to={createPublicationLink({
-                publicationTitle: publication.title,
-              })}
-            >
-              {publication.title} - {publication.subtitle}
-            </Link>
+        {publications.map((publication, index) => (
+          <li key={index}>
+            <PublicationLink
+              title={publication.title}
+              linkName={`${publication.title} - ${publication.subtitle}`}
+            />
           </li>
         ))}
       </ul>

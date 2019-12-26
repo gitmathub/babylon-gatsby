@@ -10,7 +10,7 @@ exports.createPageForPublication = async ({ graphql, actions }) => {
   publication.data.allStrapiPublications.edges.forEach(({ node }) => {
     const publication = node
     const path = permalink.createPublicationLink({
-      publicationTitle: publication.title,
+      title: publication.title,
     })
     createPage({
       path,

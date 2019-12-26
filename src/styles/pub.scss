@@ -1,18 +1,12 @@
-.pub-category {
-  @include respond(wide) {
-    margin-top: 3.2rem;
-  }
-}
-
 .pub {
+  &__title {
+    @include respond(wide) {
+      margin-top: 3.2rem;
+    }
+  }
+
   &__subtitle {
     margin-bottom: 0.8rem;
-  }
-  &__author-list {
-    display: inline;
-  }
-  &__author {
-    margin-right: 1.2rem;
   }
 
   &__details {
