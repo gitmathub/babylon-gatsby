@@ -17,7 +17,14 @@ http://localhost:8000/___graphql
 Test in different browsers on Windows:
 https://www.browserling.com
 
-## Build
+### Strapi Docs
+
+- [config](https://strapi.io/documentation/3.0.0-beta.x/guides/deployment.html)
+- [processmanager pm2](https://strapi.io/documentation/3.0.0-beta.x/guides/process-manager.html#install-pm2)
+- [webhook](https://strapi.io/documentation/3.0.0-beta.x/guides/webhooks.html)
+- [sqlite installation](https://strapi.io/documentation/3.0.0-beta.x/guides/databases.html#sqlite-installation)
+
+## Build & Deployment
 
 ### Prefix Path
 
@@ -43,6 +50,15 @@ npm run serve -- --prefix-paths
 
 http://localhost:9000/next
 
+### Check speed
+
+compression via `.htaccess`
+(don't compress html for gatsby)
+
+```
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript text/javascript application/json
+```
+
 ## Maintenaince
 
 ### Database dump
@@ -58,10 +74,14 @@ Must have
 
 - [x] Footer navigation
 - [x] Page with all items (Verlagsprogramm)
-- [ ] Authors page
+- [x] Authors page
+- [x] SSL certificate
 - [ ] Listing of all authors
-- [ ] SSL certificate
 - [ ] CMS installation
+  - [ ] strapi installation
+  - [ ] pm2 installation
+  - [ ] data import
+  - [ ] webhooks
 - [ ] Deployment automation
 
 Good to have
@@ -77,5 +97,6 @@ Goodies
 
 - [ ] Hamburger menu: collapse when click outside
 - [ ] Margin on windows internet explorer
+- [ ] Web app manifest
 
 - checkout https://github.com/staylor/react-helmet-async for resolving the warning about the _SideEffect(NullComponent)_: https://github.com/gatsbyjs/gatsby/issues/17865
