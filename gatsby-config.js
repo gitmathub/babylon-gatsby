@@ -9,6 +9,7 @@ module.exports = {
       resolve: `gatsby-plugin-htaccess`,
       options: {
         https: true,
+        SymLinksIfOwnerMatch: false,
         redirect: [`RewriteRule ^deploy http://localhost:65331/deploy [P]`],
       },
     },
