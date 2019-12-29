@@ -2,8 +2,6 @@
  * Configure your Gatsby: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const path = require('path')
-
 module.exports = {
   pathPrefix: `/next`,
   plugins: [
@@ -13,21 +11,13 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `http://localhost:65332`,
         queryLimit: 1000,
         contentTypes: [`publications`, `categories`, `authors`],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
           identifier: '',
           password: '',
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: path.resolve(__dirname, 'src/assets/svg'),
         },
       },
     },

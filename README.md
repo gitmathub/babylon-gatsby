@@ -7,7 +7,6 @@
     - [Hoster specific configuration](#hoster-specific-configuration)
     - [Nodeversion](#nodeversion)
     - [Service Monitor and Manager](#service-monitor-and-manager)
-    - [Firewall and Ports](#firewall-and-ports)
   - [Development](#development)
     - [Browser Testing](#browser-testing)
     - [Strapi Docs](#strapi-docs)
@@ -30,6 +29,7 @@ Clone the repository and install.
 
 ```bash
 git clone https://github.com/gitmathub/babylon-gatsby.git
+npm install
 
 ```
 
@@ -107,14 +107,39 @@ https://wiki.uberspace.de/development:nodejs#einrichtung_als_dienst
 uberspace-setup-service babylon-strapi npm start
 ```
 
-### Firewall and Ports
+check logs and ports
+
+```bash
+tail -f ~/service/babylon-strapi/log/main/current
+```
+
+patch start script
+
+```bash
+export NODE_ENV=production
+cd $HOME/projects/babylon-strapi
+exec node $HOME/projects/babylon-strapi/node_modules/.bin/strapi start 2>&1
+```
+
+service starting an stopping
+
+```bash
+# To start the service (hint: u = up):
+svc -u ~/service/babylon-strapi
+# To stop the service (hint: d = down):
+svc -d ~/service/babylon-strapi
+# To reload the service (hint: h = HUP):
+svc -h ~/service/babylon-strapi
+# To restart the service (hint: du = down, up):
+svc -du ~/service/babylon-strapi
+```
 
 [firewall ports](https://wiki.uberspace.de/system:ports)
 
-check on which ports services are running
+check on which ports services are running for user belab
 
 ```bash
-netstat -tulpen | grep 61337
+ netstat -tulpe | grep belab
 ```
 
 check which of your services are running
@@ -132,7 +157,7 @@ uberspace-list-ports --open
 open a port if needed
 
 ```bash
-
+uberspace-add-port --protocol tcp --firewal
 ```
 
 ## Development
@@ -211,21 +236,22 @@ Must have
   - [x] data import
   - [ ] webhooks
 - [ ] Deployment automation
-- [ ] Listing of all authors
+- [x] Enable SSL after intallation
 
 Good to have
 
-- [ ] Coloring
+- [ ] Web app manifest `gatsby-plugin-manifest`
 - [ ] Meta tags
-- [ ] Favicon
-- [ ] Publication images
-- [ ] Author images
 - [ ] Adjust link on Wikipedia
 
 Goodies
 
+- [ ] Favicon
+- [ ] Listing of all authors
+- [ ] Publication images
+- [ ] Author images
 - [ ] Hamburger menu: collapse when click outside
 - [ ] Margin on windows internet explorer
-- [ ] Web app manifest
+- [ ] Coloring
 
 - checkout https://github.com/staylor/react-helmet-async for resolving the warning about the _SideEffect(NullComponent)_: https://github.com/gatsbyjs/gatsby/issues/17865
