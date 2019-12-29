@@ -5,6 +5,13 @@
 module.exports = {
   pathPrefix: `/next`,
   plugins: [
+    {
+      resolve: `gatsby-plugin-htaccess`,
+      options: {
+        https: true,
+        redirect: [`RewriteRule ^deploy http://localhost:65331/deploy [P]`],
+      },
+    },
     `gatsby-plugin-sass`,
     'gatsby-plugin-root-import',
     `gatsby-plugin-react-helmet`,
