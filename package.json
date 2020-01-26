@@ -4,7 +4,7 @@
   "description": "Homepage of Babylon Metropololis Verlag",
   "version": "0.1.0",
   "license": "MIT",
-  "author": "mat",
+  "author": "Mat <mat@daus.berlin>",
   "scripts": {
     "build": "gatsby clean && gatsby build",
     "develop": "gatsby develop",
