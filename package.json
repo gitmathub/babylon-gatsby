@@ -31,7 +31,7 @@
     "dev-tools": "^0.1.6",
     "gatsby-plugin-root-import": "^2.0.5",
     "jest": "^26.4.2",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prettier": "^1.19.1",
     "slug": "^2.1.1"
   },
