@@ -20,7 +20,7 @@
     "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-sass": "^2.3.14",
-    "gatsby-source-strapi": "0.0.10",
+    "gatsby-source-strapi": "3.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
